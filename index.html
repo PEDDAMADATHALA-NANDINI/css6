@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text</title>
+</head>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;        
+        }
+        
+        body{
+            height: 100vh;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+        .container{
+            display:flex ;
+            border:5px solid white;
+            width: 500px;
+            height: 500px;
+            align-items: center;
+            justify-content: center;
+        }
+        .text{
+            font-size:100px;
+            font-weight: bold;
+            background: linear-gradient(15deg,red,blue,orange,violet,indigo);
+            background-clip: text;
+            background-size: 300%;
+            color:transparent;
+            animation: animate 3s linear infinite;
+        }
+        @keyframes animate{
+            from{
+                background-position:0% 50%;
+            }
+            to{
+                background-position:100% 50%;
+            }
+        }
+        
+    </style>
+<body>
+    <div class="container">
+    <div class="text">Stripe Text Animation!</div>
+    </div>
+</body>
+</html>
